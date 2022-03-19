@@ -83,6 +83,18 @@
 
 	</dependencies>
 	<distributionManagement>
+		<!-- <distributionManagement>
+	    <repository>
+	      <id>nexus</id>
+	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <url>http://3.110.101.205:8081/repository/sneha-release/</url>
+	    </repository>
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>Mithun Technologies Snapshot Nexus Repository </name>
+	      <url>http://3.110.101.205:8081/repository/sneha-snapshot/</url>
+	    </snapshotRepository>
+	</distributionManagement> -->
 
 	    <repository>
 	      <id>nexus</id>
