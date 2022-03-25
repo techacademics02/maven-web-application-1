@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM mongo
 RUN apt-get update
 RUN apt-get install mongo -y
 EXPOSE 80
