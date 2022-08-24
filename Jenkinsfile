@@ -1,5 +1,3 @@
-Build Pipeline Script
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 pipeline{
     agent any
     environment {
