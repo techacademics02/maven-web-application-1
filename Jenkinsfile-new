@@ -1,0 +1,26 @@
+pipeline{
+    agent any
+    environment {
+        PATH = "$PATH:/opt/apache-maven-3.6.1/bin"
+    }
+    stages{
+	stage('GetCode'){
+            steps{
+		git branch: 'main',
+                url: 'https://github.com/ranjith120/maven-web-application-1.git'
+            }
+         }        
+	stage('Build'){
+            steps{
+                sh 'mvn clean package'
+            }
+        } 
+        stage('Code deploy') {
+            steps{
+				sshagent(['Tomcat-Server-Agent']) {
+				  sh 'scp -o StrictHostKeyChecking=no target/01-maven-web-app.war ubuntu@35.154.196.20:/home/ubuntu/apache-tomcat-9.0.65/webapps'
+				}
+            }
+        }
+    }
+}
