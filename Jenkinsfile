@@ -1,10 +1,21 @@
-pipeline {
+Build Pipeline Script
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+pipeline{
     agent any
-    stages {
-        stage('Welcome Step') {
-            steps { 
-                echo 'Welcome to Jenkins Scripting'
+    environment {
+        PATH = "$PATH:/opt/apache-maven-3.6.1/bin"
+    }
+    stages{
+	stage('GetCode'){
+            steps{
+		git branch: 'main',
+                url: 'https://github.com/ashokitschool/maven_web_app_jenkins_pipeline.git'
             }
-        }
+         }        
+	stage('Build'){
+            steps{
+                sh 'mvn clean package'
+            }
+        }       
     }
 }
