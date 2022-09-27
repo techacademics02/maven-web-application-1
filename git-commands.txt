@@ -1,0 +1,30 @@
+                                    GIT-DOCUMENTATION
+GIT-COMMANDS:
+1)  git help: 
+2)  git init:
+3)  git config --global user.name "ranjith kumar" :
+4)  git config --global user.email "ranjithkumar@gmail.com" :	
+5)  git config --list:
+6)  git add . or git add* or git add -A:
+7)  git commit -m "lable name" :
+8)  git status:
+9)  git log:
+10) git push -u origin master/main : It is for first time pushing
+11) git clone <repo url> : to clone the code from master/main
+12) git clone --branch <branch name> <repo url> : to clone the code from perticular branch
+    git clone --b <branch name> <repo url> (--b or --branch or -b or -branch)
+13) git checkout -b <branch name> : to create branch and for switch into that branch
+14) git remote add <main/master/branch name> : when we use git push command, it will pushed to that branch
+        and to create the connection from local to central repo.
+15) git checkout <branch name> :
+16) git branch <branch name> : 
+17) git pull :
+18) git show <commit id>:
+19) git reset HEAD <file name(s)> or HEAD* : staging area to working area
+    git restore --staged <filename>
+20) git reset --soft <commit id> : take the id from top only, if we face any error take second id, but it's take the data of first id
+     mean get back the data from local repository to staging area
+21) git stash:(only in staging areas) storing the files in temparary location. here the data will be removed what you did the changes. you can do another work.
+    when you want to do your previous work use git stash apply command you can get the removed changes what you have changed.				
+22) git stash apply : once you stashed the file the data will lost once you use this command the data will come back you can use now.
+23) 									
